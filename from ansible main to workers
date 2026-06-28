@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: copying artifact file to all workers
+      copy:
+        src: /var/lib/jenkins/workspace/netflix-pipeline-ansible/target/NETFLIX-1.2.2.war
+        dest: /root/tomcat/webapps
